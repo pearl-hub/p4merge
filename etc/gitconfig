@@ -1,0 +1,3 @@
+# vim: ft=gitconfig
+[alias]
+    p4diff = difftool --tool=p4merge
