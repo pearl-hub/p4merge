@@ -1,0 +1,14 @@
+#!/bin/sh
+
+trap "[ -e $PEARL_TEMPORARY/p4merge ] && rm -rf $PEARL_TEMPORARY/p4merge" QUIT EXIT ABRT KILL TERM INT
+mkdir -p $PEARL_TEMPORARY/p4merge
+
+ARCH=$(uname -m)
+[ $ARCH != "x86_64" ] && ARCH=x86
+
+
+wget -O - http://cdist2.perforce.com/perforce/r14.1/bin.linux26${ARCH}/p4v.tgz | tar -xz -C $PEARL_TEMPORARY/p4merge
+
+mkdir -p $PEARL_HOME/opt/p4merge
+rm -rf $PEARL_HOME/opt/p4merge/*
+mv $PEARL_TEMPORARY/p4merge/p4v*/* $PEARL_HOME/opt/p4merge/

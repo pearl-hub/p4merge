@@ -1,0 +1,2 @@
+#!/bin/sh
+$PEARL_HOME/opt/p4diff/bin/p4merge $*

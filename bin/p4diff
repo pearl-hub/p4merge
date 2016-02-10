@@ -1,0 +1,2 @@
+#!/bin/sh
+[ $# -eq 7 ] && $(dirname $0)/p4merge "$2" "$5"

@@ -1,0 +1,2 @@
+#!/bin/sh
+rm -rf $PEARL_HOME/opt/p4diff
