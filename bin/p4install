@@ -7,7 +7,7 @@ ARCH=$(uname -m)
 [ $ARCH != "x86_64" ] && ARCH=x86
 
 
-wget -O - http://cdist2.perforce.com/perforce/r14.1/bin.linux26${ARCH}/p4v.tgz | tar -xz -C $PEARL_TEMPORARY/p4merge
+wget -O - http://cdist2.perforce.com/perforce/r15.1/bin.linux26${ARCH}/p4v.tgz | tar -xz -C $PEARL_TEMPORARY/p4merge
 
 mkdir -p $PEARL_HOME/opt/p4merge
 rm -rf $PEARL_HOME/opt/p4merge/*
